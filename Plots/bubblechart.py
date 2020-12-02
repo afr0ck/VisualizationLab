@@ -18,12 +18,12 @@ new_df = df.groupby(["Country"]).agg(
 
 # Preparing data
 data = [
-go.Scatter(x=new_df["Recovered"],
-y=new_df["Unrecovered"],
-text=new_df["Country"],
-mode="markers",
-marker=dict(size=new_df["Confirmed"] /
-100,color=new_df["Confirmed"] / 100, showscale=True))
+    go.Scatter(x=new_df["Recovered"],
+               y=new_df["Unrecovered"],
+               text=new_df["Country"],
+               mode="markers",
+               marker=dict(size=new_df["Confirmed"] / 100,
+                           color=new_df["Confirmed"] / 100, showscale=True))
 ]
 
 # Preparing layout
